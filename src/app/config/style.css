@@ -1,0 +1,508 @@
+/* DEFINING COMMON VARIABLES */
+:root {
+    --primary-color: #252429;
+    --secondary-color: #5D726D;
+    --neutral-lightest: #ffffff;
+    --neutral-lightest_hover: #A9CFC6;
+    --accent-color: #D7B877;
+    --accent-color_hover: #4a4e69;
+    --neutral-light: #ffedd3;
+    --neutral-med: #D7BB95;
+    --neutral-dark: #A3836E;
+    --other-dark: #5E4C3F;
+    --accent-dark: #7A6B54;
+    --accent-darker: #3B3328;
+    --darkest: #2E251F;
+
+
+    --main-font: 'Hubballi';
+
+    --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  /* kannada */
+@font-face {
+    font-family: 'Hubballi';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/hubballi/v3/o-0JIpUj3WIZ1RFN55BmwhF9Yg.woff2) format('woff2');
+    unicode-range: U+0964-0965, U+0C82-0CF2, U+200C-200D, U+20B9, U+25CC;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Hubballi';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/hubballi/v3/o-0JIpUj3WIZ1RFN55BywhF9Yg.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Hubballi';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/hubballi/v3/o-0JIpUj3WIZ1RFN55B8whE.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+/* INPUT TEXT BOXES */
+
+.form-group {
+    margin-bottom: 1vh;
+    justify-content: center;
+}
+
+.input-form {
+    /* display: flex; */
+    border: 1px solid var(--neutral-light);
+    font-weight: 400;
+    border-radius: 5px;
+    padding: .375rem .75rem; 
+    font-family: var(--main-font);
+    font-size: 1.25em;
+}
+
+.field {
+    margin: 1vh;
+}
+
+.input-box {
+    display: block;
+    justify-content: center;
+    margin-right: 0;
+}
+
+.search-box {
+    /* display: flex; */
+    display: block;
+    justify-content: center;
+    /* flex-direction: row; */
+    margin: 1vh 0vh;
+}
+
+.input-form:focus {
+    border: 0.75px solid var(--neutral-lightest_hover);
+    /* background-color: var(--neutral-lightest); */
+}
+
+@media only screen and (max-width: 900px) {
+    .input-box, .search-box, .input-form {
+        justify-content: center;
+    }
+    .input-box, .search-box {
+        justify-content: center;
+        padding: 0;
+    }
+    .input-form {
+        height: 3vh;
+        width: auto;
+    }
+}
+
+/* IMAGES */
+
+/* the logo images of different companies with which we create pipelines */
+.course-preview {
+    display: inline-block;
+    width: 90%;
+}
+
+.course-preview:hover {
+    border-radius: 0.5rem;
+}
+
+.preview {
+    align-items: center;
+}
+
+.list {
+    width: 30vw;
+}
+
+.menu-icon {
+    display: none;
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 900px) { 
+    .nav-logo-img {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+        font-size: large;
+        color: var(--neutral-lightest);
+        visibility: visible;
+    }
+    .img-lg {
+        max-width: 50%;
+    }
+    .main-logo-image {
+        margin-top: 0;
+    }
+}
+
+
+
+/* ELEMENT ORGANIZATION */
+.flex-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: center;
+}
+
+.col {
+    display: flex;   
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex: 1; /*this makes it so that the icons on the home page stay in nice rows*/
+}
+
+.col-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.margin-5 {
+    margin: 5vh;
+}
+
+.margin-3 {
+    margin: 3vh;
+}
+
+.margin-1 {
+    margin: 1vh;
+}
+
+.margin--3 {
+    margin: -3vh;
+}
+
+.padding-3 {
+    padding: 3vh;
+}
+
+.align-right {
+    display: flex;
+    float: right;
+    justify-content: right;
+}
+
+.align-center {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+}
+
+.bottom {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.top {
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.box-container {
+    margin: 3vh;
+}
+
+.launch {
+    margin-top: -3rem;
+}
+
+.main-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 5vw 0 0 0;
+    justify-content: center;
+    margin: 0vw 2vw;
+}
+
+body {
+    background-color: var(--neutral-light); 
+    background-image: url("../assets/triangle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 2vh 5vw;
+    }
+    .col-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 1200px) {
+    .main-container{
+        max-width: 1150px;
+        align-items: center;
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 900px) {
+    .main-container{
+        max-width: 850px;
+        align-items: center;
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+/* TEXT */
+
+.text {
+    margin: 0rem 1rem 0rem 0rem;
+    text-align: center;
+    font-family: var(--main-font);
+}
+
+.body-text {
+    font-size: 1.5em;
+}
+
+.title { /*use*/
+    font-size: 4em;
+    font-weight: 700;
+    color: var(--accent-dark);
+}
+
+.subtitle { /*use*/
+    font-size: 2em;
+    font-weight: 300;
+    font-family: 'Hubballi';
+}
+
+.card-subtitle {
+    margin-top: 1.5rem;
+    font-size: 1.5em;
+}
+
+.subheader {
+    display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+
+.subheader-detail {
+    display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 300;
+    font-size: 1.0rem;
+    font-style: italic;
+
+}
+
+.link-txt {
+    text-decoration: none;
+    font-family: var(--main-font);
+    color: var(--primary-color);
+}
+
+.side-design {
+    width: 40vw;
+    height: auto;
+    margin-top: -4rem;
+}
+
+/* NAVIGATION */
+
+.topnav { /*use*/
+    background-color: var(--neutral-light);
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+
+.nav-links { /*use*/
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.card, .nav-link { /*use*/
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: var(--main-font);
+    background-color: var(--neutral-light);
+    border-radius: 10%;
+}
+
+.card { /*use*/
+    display: table-cell;
+    vertical-align: middle;
+    width: inherit;
+    height: 6rem;
+    margin-bottom: 1rem;
+    background-color: var(--neutral-lightest);
+}
+
+.nav-link { /*use*/
+    padding: 0px 16px;
+    font-size: 1.5em;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.nav-link:hover, .link-txt:hover { /*use*/
+    background-color: var(--accent-color);
+    color: var(--neutral-dark)
+}
+
+/* Add an active class to highlight the current page */
+.is-active { /*use*/
+    display: hidden;
+    color: var(--neutral-light);
+    font-size: 20px;
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the selected one. Show the link that contains should open and close the topnav (.menu-icon) */
+@media screen and (max-width: 900px) { /*use*/
+    .topnav .nav-link{display: none;}
+    .topnav .menu-icon {
+        float: right;
+        display: block;
+    }
+    .topnav {
+        padding: 0;
+        margin-bottom: 3vh;
+        height: 7vh;
+        min-height: 40px;
+    }
+    .is-active {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-family: var(--main-font);
+        margin-left: 5vw;
+        display: block;
+    }
+}
+  
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
+This class makes the topnav display the links vertically on small screens */
+@media screen and (max-width: 900px) { /*use*/
+    .topnav.responsive {
+        position: relative;
+        height: 45vh;
+        /* padding-top: 2vh; */
+    }
+    .topnav.responsive .menu-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0;
+    }
+    .topnav.responsive .nav-link {
+        float: none;
+        display: block;
+        text-align: left;
+        padding-top: 2vh;
+        margin-left: -50px;
+    }
+    .topnav.responsive .nav-links {
+        justify-content: flex-start;
+        flex-direction: column;
+        height: 90%;
+    }
+    .topnav.responsive .is-active {
+        visibility: hidden;
+    }
+} 
+
+/*menu icon*/
+.menu-icon { /*use*/
+    display: inline-block;
+    cursor: pointer;
+    margin: 1rem;
+}
+  
+.bar1, .bar2, .bar3 { /*use*/
+    width: 35px;
+    height: 5px;
+    background-color: var(--accent-color);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 { /*use*/
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+  
+/* Fade out the second bar */
+.change .bar2 { /*use*/
+    opacity: 0;
+}
+  
+/* Rotate last bar */
+.change .bar3 { /*use*/
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/* CUSTOM TABS */
+.styled-tabs { /*use*/
+	background-color: var(--neutral-dark);
+	color: var(--neutral-lightest);
+    display: flex;
+    width: 100%;
+}
+
+.styled-tab:hover { /*use*/
+	background-color:var(--primary-color);
+}
+
+.styled-tab:focus { /*use*/
+    background-color: var(--secondary-color)
+}
+
+.tabPanel { /*use*/
+    box-shadow: rgba(14,26,47,.06) 0 3px 8px, rgba(14,26,47,.06) 0 9px 18px;
+    /* padding-top: 12; */
+    width: 100%;
+}
+
+.PrivateTabIndicator-colorSecondary-3 { /*use*/
+    background-color: var(--secondary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+.MuiBox-root-14 { /*use*/
+    padding: 24px;
+    width: 100%
+}
+
+@media screen and (max-width: 900px) {
+    .styled-tab { /*use*/
+        min-width: 50%;
+    }
+}

@@ -1,0 +1,36 @@
+.styled-tabs {
+	background-color:#00BFFF;
+	color:#FFFFFF;
+    display: flex;
+    width: 100%;
+}
+
+.styled-tab:hover {
+	background-color:#00b4f0;
+}
+
+.styled-tab:focus {
+    background-color: #007BB6;
+}
+
+.tabPanel {
+    box-shadow: rgba(14,26,47,.06) 0 3px 8px, rgba(14,26,47,.06) 0 9px 18px;
+    /* padding-top: 12; */
+    width: 100%;
+}
+
+.PrivateTabIndicator-colorSecondary-3 {
+    background-color: #007BB6 !important;
+    color: #007BB6 !important;
+}
+
+.MuiBox-root-14 {
+    padding: 24px;
+    width: 100%
+}
+
+@media screen and (max-width: 900px) {
+    .styled-tab {
+        min-width: 50%;
+    }
+}
